@@ -9,9 +9,11 @@ local actions = {}
 
 function actions.duplicate_file()
   local old_filename = view.hovered_item.abs_filename
+  local current_dir = old_filename:match("(.*[/\\])")
+
   core.command_view:set_text(view.hovered_item.filename)
   core.command_view:enter("Filename", function(filename)
-    local new_filename = core.project_dir .. PATHSEP .. filename
+    local new_filename = current_dir .. filename
 
     if (fsutils.is_object_exist(new_filename)) then
       core.error("[treeview-extender] Unable to copy file : %s to %s. Duplicate name exists.", old_filename, new_filename)
