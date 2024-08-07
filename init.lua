@@ -1,7 +1,13 @@
--- mod-version:3 -- lite-xl 2.1
+-- mod-version:3
 -- Author : Juliardi
 -- Email : ardi93@gmail.com
 -- Github : github.com/juliardi
+-----------------------------------------------------------------------
+-- NAME       : Treeview Extender
+-- DESCRIPTION: Additional file operation menu for Pragtical's Treeview
+-- AUTHOR     : Juliardi (juliardi)
+-- GOALS      : Add the ability to copy, move, and duplicate file to Treeview
+-----------------------------------------------------------------------
 
 local core = require "core"
 local command = require "core.command"
